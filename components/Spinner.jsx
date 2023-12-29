@@ -6,16 +6,16 @@ import '@/styles/preloader.scss'
 
 const Spinner = () => {
   return (
-    <div>
-      {/* <BarLoader color='#9747FF' /> */}
-      <div className="preloader">
+    <div className='bg-[url(/figmaStuffs/mainBg.png)] bg-cover w-full h-[100vh] grid place-items-center justify-center'>
+      <BarLoader color='#ffffff' />
+      {/* <div className="preloader">
         <div className="texts-container">
                 <span>QuCIS</span>
                 <span>QuCIS</span>
                 <span>QuCIS</span>
 
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

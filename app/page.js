@@ -22,7 +22,7 @@ useEffect(() => {
     <main className="">
 
 
-<Spinner />
+{/* <Spinner /> */}
  
         <>
     <div className='w-full h-[100vh]  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
