@@ -3,16 +3,31 @@
 
 import ImageCarousel from '@/components/Carousel'
 import Link from 'next/link'
-
+import SplineModel from '@/components/splineModel'
+import { useEffect, useState } from 'react'
+import Spinner from '@/components/Spinner'
+import { preLoaderAnim } from '@/animations'
 
 export default function Home() {
-  return (
+const [loading, setLoading] = useState(true)
+
+
+useEffect(() => {
+  preLoaderAnim()
+}, [])
+
+
+
+ return (
     <main className="">
-{/* FIRST SECTION */}
-{/* MAIN SECTION */}
+
+
+<Spinner />
+ 
+        <>
     <div className='w-full h-[100vh]  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
-      <div className='border border-white w-[80%] h-[60%] flex md:flex-row flex-col justify-between items-center'>
-        <div className='border  md:w-[45%]'>
+      <div className=' w-[80%] h-[60%] flex md:flex-row flex-col justify-between items-center'>
+        <div className='  md:w-[45%]'>
           <h1 className='mainHeading text-[72px] lg:text-[128px] font-bj'>QuCIS<span>.</span></h1>
           <p className='font-source font-extralight mt-[20px] text-white/70 tracking-[0.48px] leading-[33px] text-[20px] drop-shadow-md'>
             Quantum Computing and Information Systems,  A Research Group focused on Quantum information theory and coding, Quantum algorithms.
@@ -30,7 +45,10 @@ export default function Home() {
             </svg>
           </button>
         </div>
-        <div className='threedmodel'></div>
+        <div className='threedmodel '>
+
+          <SplineModel />
+        </div>
 
 
 
@@ -39,8 +57,6 @@ export default function Home() {
 
     </div>
 
-{/* SECOND SECTION */}
-{/* OUR MISSION SECTION */}
       <div className="w-full py-24 md:p-0 md:h-[100vh]  bg-[url('/figmaStuffs/secondBg.png')] bg-cover grid place-items-center">
         
         <div className='w-[80%] md:h-[60%]   flex md:flex-row flex-col justify-between  gap-12'>
@@ -67,8 +83,6 @@ export default function Home() {
       </div>
 
 
-{/* THIRD SECTION */}
-{/* TEAM SECTION */}
       <div className="w-full py-24 md:p-0 md:h-[100vh]  bg-[url('/figmaStuffs/thirdBg.png')] bg-cover grid place-items-center">
 
         <div className='w-[80%] md:h-[60%]  flex md:flex-row  flex-col-reverse justify-between  gap-12 '>
@@ -109,6 +123,7 @@ export default function Home() {
 
           </div>
         </div>
+        </>
 
     </main>
   )
