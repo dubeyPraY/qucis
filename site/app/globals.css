@@ -8,6 +8,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +21,6 @@
 
 
 .contact_btn{
-
   display: flex;
   padding: 13px 25px;
   justify-content: center;
@@ -30,6 +30,7 @@
   background: #9717E5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .contact_btn:hover{
   background: white;
   color: #9717E5;
@@ -39,7 +40,7 @@
   color: #FFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 font-family: "Bai Jamjuree", sans-serif;
-font-size: 128px;
+
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -91,9 +92,8 @@ letter-spacing: -1.28px;
 }
 
 .paraFonts{
-  font-family: 'Source Sans 3';
+  font-family: 'Source Sans 3', sans-serif;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
   font-weight: 200;
 }
 
@@ -106,5 +106,8 @@ nav ul li:not(.contact_btn):hover{
 }
 
 .carousel{
-  background: radial-gradient(farthest-corner at 0px 0px,#2B103887, #5C2178, #31123FED, #5C2178EB)
+  width: 200px;
+  border-radius: 12px;
+  background: radial-gradient(577.45% 142.61% at 0% 0%, rgba(43, 16, 56, 0.53) 0%, #5C2178 0.01%, rgba(49, 18, 63, 0.93) 52.08%, rgba(92, 33, 120, 0.92) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
