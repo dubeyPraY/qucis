@@ -45,7 +45,7 @@ const ImageCarousel = () => {
             className="   px-12 py-[74px] gap-12 flex flex-col md:flex-row justify-between"
           >
             <div className="md:w-[50%] border">
-              {/* <img src={item.image} className="md:h-full rounded-[24px]" /> */}
+              <img src={item.image} className="md:h-full rounded-[24px]" />
             </div>
             <div className="md:w-[55%] text-left  flex flex-col gap-[19px] ">
               <h1 className="text-[40px] font-bj font-extrabold italic text-[#9747FF]">

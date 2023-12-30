@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import { BarLoader } from 'react-spinners'
 import '@/styles/preloader.scss'
 
 

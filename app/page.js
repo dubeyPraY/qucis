@@ -4,14 +4,16 @@
 import ImageCarousel from '@/components/Carousel'
 import Link from 'next/link'
 import SplineModel from '@/components/splineModel'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Preloader from '@/components/Preloader'
 import { preLoaderAnim } from '@/animations'
 import SubstackFeed from '@/components/Substack'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
 const [loading, setLoading] = useState(true)
 
+const ref = useRef(null)
 
 useEffect(() => {
   preLoaderAnim()
@@ -24,10 +26,10 @@ useEffect(() => {
     <main className="">
 
 
-<Preloader />
+<Preloader ref={ref} />
  
         <>
-    <div className='w-full py-20 md:p-20  md:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
+    <div className='w-full py-20 min-h-[80vh] lg:p-20  lg:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
       <div className=' w-[80%]  flex md:flex-row flex-col justify-between items-center'>
         <div className='  md:w-[45%]'>
           <h1 className='mainHeading text-[72px] lg:text-[128px] font-bj'>QuCIS<span>.</span></h1>
@@ -63,19 +65,19 @@ useEffect(() => {
 
     </div>
 
-      <div className="w-full py-24 md:p-0 md:h-[100vh]  bg-[url('/figmaStuffs/secondBg.png')] bg-cover grid place-items-center">
+      <div className="w-full py-24 md:py-[200px]    bg-[url('/figmaStuffs/secondBg.png')] bg-cover grid place-items-center">
         
-        <div className='w-[80%] md:h-[60%]   flex md:flex-row flex-col justify-between  gap-12'>
-          <img src='/figmaStuffs/imgComponent.png' alt='' />
+        <div className=' w-[80%] flex md:flex-row flex-col justify-around items-center gap-12'>
+          <img src='/figmaStuffs/imgComponent.png' alt='' className='aspect-square md:h-[400px] ' />
           <div className='md:w-[50%] flex flex-col gap-6 '>
             <h1 className='font-bj font-extrabold text-[40px] md:text-[48px] italic secondHeading text-[#2B1038]'>
               Our Mission
             </h1>
-            <p className='secondPara text-[#2B1038] md:text-[24px] text-[20px]'>
-            QuCIS Labs is dedicated to advancing quantum information theory and coding, unraveling the intricacies of quantum systems to drive breakthroughs in information processing.Our mission involves pioneering quantum algorithms, pushing the limits of computational possibilities and striving for quantum advantage in problem-solving.Exploring quantum computing applications in diverse fields, from biology to finance, we aim to unleash the transformative potential of quantum technologies.
+            <p className='secondPara text-[#2B1038] md:text-[24px] leading-[26px] md:leading-[33px] text-[15px]'>Our mission involves pioneering quantum algorithms, pushing the limits of computational possibilities and striving for quantum advantage in problem-solving.Exploring quantum computing applications in diverse fields, from biology to finance, we aim to unleash the transformative potential of quantum technologies.
+
             </p>
 
-            <button className='border-2 mt-12 shadow-lg  md:w-[188px] border-black px-[30px] py-[16px] font-semibold rounded-full font-source flex items-center gap-[15px] justify-center md:justify-between hover:bg-gray-200 transition-all'>
+            <button className='border-2 shadow-lg  md:w-[188px] border-black px-[30px] py-[16px] font-semibold rounded-full font-source flex items-center gap-[15px] justify-center md:justify-between hover:bg-gray-200 transition-all'>
 
                 <Link href="/about" className='text-[18px] drop-shadow-md tracking-[0.5px]'>
                 Read More
@@ -91,10 +93,10 @@ useEffect(() => {
       </div>
 
 
-      <div className="w-full py-24 md:p-0 md:h-[100vh]  bg-[url('/figmaStuffs/thirdBg.png')] bg-cover grid place-items-center">
+      <div className="w-full py-24 md:p-0 md:py-[200px]  bg-[url('/figmaStuffs/thirdBg.png')] bg-cover grid place-items-center">
 
-        <div className='w-[80%] md:h-[60%]  flex md:flex-row  flex-col-reverse justify-between  gap-12 '>
-          <div className='md:w-[45%] flex flex-col gap-6  '>
+        <div className='w-[80%]  flex md:flex-row  flex-col-reverse justify-around  gap-12 items-center '>
+          <div className='md:w-[45%] flex flex-col gap-6   '>
             <h1 className='text-white font-bj font-extrabold text-[40px] md:text-[48px] italic secondHeading'>
               Our Team
             </h1>
@@ -115,7 +117,7 @@ useEffect(() => {
             </Link>
 
           </div>
-          <img src='/figmaStuffs/imgComponent2.png' alt='' />
+          <img src='/figmaStuffs/imgComponent2.png' alt='' className='aspect-square md:h-[400px]' />
 
         </div>
         </div>

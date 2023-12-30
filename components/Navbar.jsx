@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -10,26 +11,27 @@ import { IoCloseOutline } from "react-icons/io5";
 
 export default function Navbar() {
   const path = usePathname();
+  const router = useRouter()
 
   // CONDITIONALLY RENDERING HAMBURGER AND NAVBAR THROUGH WINDOW SCREEN SIZE
-  const [isDesktop, setDesktop] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth > 1024) {
-      setDesktop(true);
-    } else {
-      setDesktop(false);
-    }
+  // const [isDesktop, setDesktop] = useState(false);
+  // useEffect(() => {
+  //   if (window.innerWidth > 1024) {
+  //     setDesktop(true);
+  //   } else {
+  //     setDesktop(false);
+  //   }
 
-    const updateMedia = () => {
-      if (window.innerWidth > 1024) {
-        setDesktop(true);
-      } else {
-        setDesktop(false);
-      }
-    };
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  }, []);
+  //   const updateMedia = () => {
+  //     if (window.innerWidth > 1024) {
+  //       setDesktop(true);
+  //     } else {
+  //       setDesktop(false);
+  //     }
+  //   };
+  //   window.addEventListener("resize", updateMedia);
+  //   return () => window.removeEventListener("resize", updateMedia);
+  // }, [isDesktop, router]);
 
 
 // SHOW MENU ON CLICK LOGIC
@@ -48,7 +50,7 @@ export default function Navbar() {
           QuCIS
         </Link>
         </div>
-        {isDesktop ? (
+        {/* {isDesktop ? ( */}
           <ul className=" flex flex-col lg:flex-row  gap-12 items-center font-source lg:visible invisible">
             <li
               className={` ${
@@ -93,24 +95,31 @@ export default function Navbar() {
             >
               <Link href="/gallery">Gallery</Link>
             </li>
-
+            <Link href="/contact">
             <li className={`contact_btn cursor-pointer transition-all ${
                 path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
               }`}>
-              <Link href="/contact">Contact</Link>
+              Contact
             </li>
+            </Link>
           </ul>
-        ) : (
-          <div className=" lg:invisible visible">
+        {/*  ) : ( */}
+        
+        {/*  )} */}
+            <div className=" lg:invisible visible absolute right-12">
             <GiHamburgerMenu color="#fff" onClick={() => setShowMenu(!showMenu)} />
           </div>
-        )}
-
 
 
 
       </nav>
-      <div className={`bg-[url(/figmaStuffs/mobilemenu.png)] bg-cover absolute h-[100vh] left-0 w-full origin-top ${showMenu ? "top-[-100vh]" : "top-0"} transition-all bg-white z-10 ease-linear`}>
+
+
+
+
+
+
+      <div className={`bg-[url(/figmaStuffs/mobilemenu.png)] bg-cover absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${showMenu ? "top-[0vh]" : "top-[-100vh]"} transition-all bg-white z-10 ease-linear`}>
       <div className="p-4  flex items-center justify-between">
         <h1 className={`font-bj font-bold text-[32px] shadow-lg ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white"
@@ -168,13 +177,16 @@ export default function Navbar() {
 
 
         </ul>
+
+        <Link onClick={() => setShowMenu(!showMenu)} href="/contact">
+
         <button className={`${
                 path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
               } mt-10 w-full py-3 rounded-xl text-[32px] tracking-wider font-bold font-source`}>
-              <Link onClick={() => setShowMenu(!showMenu)} href="/contact">
                 Contact Us
-                </Link>
               </button>
+              </Link>
+
       </div>
 
 </div>

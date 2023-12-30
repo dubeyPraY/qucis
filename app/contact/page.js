@@ -38,7 +38,7 @@ const Contact = () => {
       </h1>
     </div>
 
-    <div className="px-6 md:px-24 text-white text-[20px] md:text-[24px] font-source text-center">
+    <div className="px-6 md:mb-48 md:px-24 text-white text-[20px] md:text-[24px] font-source text-center">
         <p>
         Looking forward to enthusiastic students from backgrounds in EE, CS, Math, Physics, Chemistry to work on topics lying in the broad areas of Quantum Information Science.
 
