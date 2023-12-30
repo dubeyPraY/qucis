@@ -57,14 +57,6 @@ export default function Navbar() {
             >
               <Link href="/about">About</Link>
             </li>
-
-            <li
-              className={` ${
-                path === "/publications" ? "text-[#DE97FF]" : "text-white"
-              }`}
-            >
-              <Link href="/publications">Publications</Link>
-            </li>
             <li
               className={` ${
                 path === "/team" ? "text-[#DE97FF]" : "text-white"
@@ -74,11 +66,34 @@ export default function Navbar() {
             </li>
             <li
               className={` ${
+                path === "/publications" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link href="/publications">Publications</Link>
+            </li>
+            
+            <li
+              className={` ${
                 path === "/funding" ? "text-[#DE97FF]" : "text-white"
               }`}
             >
               <Link href="/funding">Funding</Link>
             </li>
+            <li
+              className={` ${
+                path === "/resources" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link href="/resources">Resources</Link>
+            </li>
+            <li
+              className={` ${
+                path === "/gallery" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link href="/gallery">Gallery</Link>
+            </li>
+
             <li className={`contact_btn cursor-pointer transition-all ${
                 path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
               }`}>
@@ -95,7 +110,7 @@ export default function Navbar() {
 
 
       </nav>
-      <div className={`bg-[url(/figmaStuffs/mobilemenu.png)] bg-cover absolute h-[100vh] top-0 left-0 w-full origin-top ${showMenu ? "scale-y-1" : "scale-y-0"} transition-all bg-white z-10`}>
+      <div className={`bg-[url(/figmaStuffs/mobilemenu.png)] bg-cover absolute h-[100vh] left-0 w-full origin-top ${showMenu ? "top-[-100vh]" : "top-0"} transition-all bg-white z-10 ease-linear`}>
       <div className="p-4  flex items-center justify-between">
         <h1 className={`font-bj font-bold text-[32px] shadow-lg ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white"
@@ -136,11 +151,26 @@ export default function Navbar() {
             >
               <Link onClick={() => setShowMenu(!showMenu)} href="/funding">Funding</Link>
             </li>
-        
+            <li
+              className={` ${
+                path === "/resources" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link href="/resources">Resources</Link>
+            </li>
+            <li
+              className={` ${
+                path === "/gallery" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link href="/gallery">Gallery</Link>
+            </li>
+
+
         </ul>
         <button className={`${
                 path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
-              } mt-8 w-full py-4 text-[#] rounded-xl text-[32px] tracking-wider font-bold`}>
+              } mt-10 w-full py-3 rounded-xl text-[32px] tracking-wider font-bold font-source`}>
               <Link onClick={() => setShowMenu(!showMenu)} href="/contact">
                 Contact Us
                 </Link>

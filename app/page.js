@@ -5,7 +5,7 @@ import ImageCarousel from '@/components/Carousel'
 import Link from 'next/link'
 import SplineModel from '@/components/splineModel'
 import { useEffect, useState } from 'react'
-import Spinner from '@/components/Spinner'
+import Preloader from '@/components/Preloader'
 import { preLoaderAnim } from '@/animations'
 import SubstackFeed from '@/components/Substack'
 
@@ -13,10 +13,10 @@ export default function Home() {
 const [loading, setLoading] = useState(true)
 
 
-// useEffect(() => {
-//   preLoaderAnim()
+useEffect(() => {
+  preLoaderAnim()
   
-// }, [])
+}, [])
 
 
 
@@ -24,18 +24,18 @@ const [loading, setLoading] = useState(true)
     <main className="">
 
 
-{/* <Spinner /> */}
+<Preloader />
  
         <>
-    <div className='w-full h-[100vh]  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
-      <div className=' w-[80%] h-[60%] flex md:flex-row flex-col justify-between items-center'>
+    <div className='w-full py-20 md:p-20  md:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
+      <div className=' w-[80%]  flex md:flex-row flex-col justify-between items-center'>
         <div className='  md:w-[45%]'>
           <h1 className='mainHeading text-[72px] lg:text-[128px] font-bj'>QuCIS<span>.</span></h1>
-          <p className='font-source font-extralight mt-[20px] text-white/70 tracking-[0.48px] leading-[33px] text-[20px] drop-shadow-md'>
+          <p className='font-source font-extralight md:mt-[20px] text-white/70 tracking-[0.48px] md:leading-[33px] md:text-[20px] drop-shadow-md'>
             Quantum Computing and Information Systems,  A Research Group focused on Quantum information theory and coding, Quantum algorithms.
             </p>
-          <button className='flex gap-4 justify-between items-center mt-[60px] px-[30px] py-[16px] text-[20px] font-semibold bg-white rounded-full font-source main_btn'>
-            <a>KNOW US</a>
+          <button className='flex gap-4 justify-between items-center mt-[30px] md:mt-[60px] px-[25px] md:px-[30px] py-[16px] text-[15px] md:text-[20px] font-semibold bg-white rounded-full font-source main_btn hover:brightness-90 transition-all'>
+            <h1>KNOW US</h1>
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
               <path d="M2 2L7 7L2 12" stroke="url(#paint0_linear_66_43)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               <defs>
@@ -72,10 +72,10 @@ const [loading, setLoading] = useState(true)
               Our Mission
             </h1>
             <p className='secondPara text-[#2B1038] md:text-[24px] text-[20px]'>
-              The NQCC is a national centre that focuses on translating UK research into innovation. We are addressing the key engineering challenges involved with scaling quantum computers, and we are engaging with industry, government and the research community to support the growth of the UK’s quantum computing ecosystem.
+            QuCIS Labs is dedicated to advancing quantum information theory and coding, unraveling the intricacies of quantum systems to drive breakthroughs in information processing.Our mission involves pioneering quantum algorithms, pushing the limits of computational possibilities and striving for quantum advantage in problem-solving.Exploring quantum computing applications in diverse fields, from biology to finance, we aim to unleash the transformative potential of quantum technologies.
             </p>
 
-            <button className='border-2 mt-12 shadow-lg  md:w-[188px] border-black px-[30px] py-[16px] font-semibold rounded-full font-source flex items-center gap-[15px] justify-center md:justify-between'>
+            <button className='border-2 mt-12 shadow-lg  md:w-[188px] border-black px-[30px] py-[16px] font-semibold rounded-full font-source flex items-center gap-[15px] justify-center md:justify-between hover:bg-gray-200 transition-all'>
 
                 <Link href="/about" className='text-[18px] drop-shadow-md tracking-[0.5px]'>
                 Read More
