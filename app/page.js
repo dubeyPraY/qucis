@@ -7,14 +7,16 @@ import SplineModel from '@/components/splineModel'
 import { useEffect, useState } from 'react'
 import Spinner from '@/components/Spinner'
 import { preLoaderAnim } from '@/animations'
+import SubstackFeed from '@/components/Substack'
 
 export default function Home() {
 const [loading, setLoading] = useState(true)
 
 
-useEffect(() => {
-  preLoaderAnim()
-}, [])
+// useEffect(() => {
+//   preLoaderAnim()
+  
+// }, [])
 
 
 
@@ -45,9 +47,13 @@ useEffect(() => {
             </svg>
           </button>
         </div>
-        <div className='threedmodel '>
+        <div className='threedmodel'>
+        {/* <script src="https://substackapi.com/embeds/feed.js" async></script> */}
+        {/* <SubstackFeed /> */}
 
-          <SplineModel />
+
+
+          {/* <SplineModel /> */}
         </div>
 
 
@@ -62,17 +68,19 @@ useEffect(() => {
         <div className='w-[80%] md:h-[60%]   flex md:flex-row flex-col justify-between  gap-12'>
           <img src='/figmaStuffs/imgComponent.png' alt='' />
           <div className='md:w-[50%] flex flex-col gap-6 '>
-            <h1 className='font-bj font-extrabold text-[48px] italic secondHeading text-[#2B1038]'>
+            <h1 className='font-bj font-extrabold text-[40px] md:text-[48px] italic secondHeading text-[#2B1038]'>
               Our Mission
             </h1>
-            <p className='secondPara text-[#2B1038]'>
+            <p className='secondPara text-[#2B1038] md:text-[24px] text-[20px]'>
               The NQCC is a national centre that focuses on translating UK research into innovation. We are addressing the key engineering challenges involved with scaling quantum computers, and we are engaging with industry, government and the research community to support the growth of the UK’s quantum computing ecosystem.
             </p>
 
-            <button className='border-2 mt-12 shadow-lg  w-[188px] border-black px-[30px] py-[16px] font-semibold rounded-full font-source flex items-center gap-[15px] justify-between'>
-              <a className='text-[18px] drop-shadow-md tracking-[0.5px]'>
+            <button className='border-2 mt-12 shadow-lg  md:w-[188px] border-black px-[30px] py-[16px] font-semibold rounded-full font-source flex items-center gap-[15px] justify-center md:justify-between'>
+
+                <Link href="/about" className='text-[18px] drop-shadow-md tracking-[0.5px]'>
                 Read More
-              </a>
+                </Link>
+
               <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 2L7 7L2 12" stroke="#2B1038" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -87,16 +95,16 @@ useEffect(() => {
 
         <div className='w-[80%] md:h-[60%]  flex md:flex-row  flex-col-reverse justify-between  gap-12 '>
           <div className='md:w-[45%] flex flex-col gap-6  '>
-            <h1 className='text-white font-bj font-extrabold text-[48px] italic secondHeading'>
+            <h1 className='text-white font-bj font-extrabold text-[40px] md:text-[48px] italic secondHeading'>
               Our Team
             </h1>
-            <p className='secondPara text-white font-source font-light'>
+            <p className='secondPara text-[20px] md:text-[24px] text-white font-source font-light'>
             This Lab is head by <b>Dr. Ankur Raina</b>, who works as an Assistant Professor in <b>the Department of EECS, IISER Bhopal</b>. He worked as a researcher/scientist at <b>the Department of Electrical and Computer Engineering, University of Arizona</b> with <b>Prof. Bane Vasic</b>. 
             </p>
             <Link href='/team'>
 
-            <button className='text-white mt-12 shadow-lg  w-[180px] bg-[#9717E5] rounded-[50px] px-[30px] py-[16px] font-semibold  font-source flex items-center justify-around hover:bg-[#9717E5]/80 transition-all'>
-              <h1  className='text-[18px] font-light drop-shadow-md tracking-[0.5px]' >
+            <button className='text-white mt-12 shadow-lg w-full md:w-[180px] bg-[#9717E5] rounded-[50px] px-[30px] py-[16px] font-semibold gap-[15px]  font-source flex items-center justify-center md:justify-around hover:bg-[#9717E5]/80 transition-all'>
+              <h1  className='text-[18px] drop-shadow-md tracking-[0.5px]' >
                 Know Us
               </h1>
               <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +123,7 @@ useEffect(() => {
 {/* CAROUSEL SECTION */}
         <div className="  bg-[url('/figmaStuffs/secondBg.png')] bg-cover grid place-items-center py-24">
           <div className='  grid place-items-center justify-center text-center  gap-12 mt-12'>
-            <h1 className='font-bj text-[64px] md:text-[72px] font-semibold  '>OUR RECENT EVENTS</h1>
+            <h1 className='font-bj text-[48px] md:text-[72px] font-semibold  '>OUR RECENT EVENTS</h1>
               <div className=' w-full border flex items-center justify-center  relative  '>
                 <ImageCarousel />
               </div>

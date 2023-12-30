@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseOutline } from "react-icons/io5";
+
 
 export default function Navbar() {
   const path = usePathname();
-  console.log(path == "/team");
 
   // CONDITIONALLY RENDERING HAMBURGER AND NAVBAR THROUGH WINDOW SCREEN SIZE
   const [isDesktop, setDesktop] = useState(false);
@@ -30,15 +31,25 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", updateMedia);
   }, []);
 
+
+// SHOW MENU ON CLICK LOGIC
+  const [showMenu, setShowMenu] = useState(false)
+
+
+
+
   return (
     <>
       <nav className=" absolute px-12 w-full h-[15vh] flex justify-between items-center  text-lg font-regular ">
-        <div className="text-white">
-        <Link href='/'>QuCIS
+        <div className={` font-bj font-bold text-[32px] ${
+                path === "/" ? "text-[#DE97FF]" : "text-white"
+              }`}>
+        <Link href='/' >
+          QuCIS
         </Link>
         </div>
         {isDesktop ? (
-          <ul className="flex flex-col lg:flex-row  gap-12 items-center font-source lg:visible invisible">
+          <ul className=" flex flex-col lg:flex-row  gap-12 items-center font-source lg:visible invisible">
             <li
               className={` ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white"
@@ -69,17 +80,75 @@ export default function Navbar() {
               <Link href="/funding">Funding</Link>
             </li>
             <li className={`contact_btn cursor-pointer transition-all ${
-                path === "/contact" ? "text-[#DE97FF]" : "text-white"
+                path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
               }`}>
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
         ) : (
           <div className=" lg:invisible visible">
-            <GiHamburgerMenu />
+            <GiHamburgerMenu color="#fff" onClick={() => setShowMenu(!showMenu)} />
           </div>
         )}
+
+
+
+
       </nav>
+      <div className={`bg-[url(/figmaStuffs/mobilemenu.png)] bg-cover absolute h-[100vh] top-0 left-0 w-full origin-top ${showMenu ? "scale-y-1" : "scale-y-0"} transition-all bg-white z-10`}>
+      <div className="p-4  flex items-center justify-between">
+        <h1 className={`font-bj font-bold text-[32px] shadow-lg ${
+                path === "/about" ? "text-[#DE97FF]" : "text-white"
+              }`}>
+
+              <Link onClick={() => setShowMenu(!showMenu)} href="/">QuCIS</Link>
+</h1>
+      <IoCloseOutline className="text-[32px] text-white " onClick={() => setShowMenu(!showMenu)} />
+      </div>
+      <div className="p-4 mt-6">
+        <ul className="text-white font-source font-bold text-[32px] tracking-wide grid gap-2">
+        <li
+              className={` ${
+                path === "/about" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link onClick={() => setShowMenu(!showMenu)} href="/about">About</Link>
+            </li>
+
+            <li
+              className={` ${
+                path === "/publications" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link onClick={() => setShowMenu(!showMenu)} href="/publications">Publications</Link>
+            </li>
+            <li
+              className={` ${
+                path === "/team" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link onClick={() => setShowMenu(!showMenu)} href="/team">Team</Link>
+            </li>
+            <li
+              className={` ${
+                path === "/funding" ? "text-[#DE97FF]" : "text-white"
+              }`}
+            >
+              <Link onClick={() => setShowMenu(!showMenu)} href="/funding">Funding</Link>
+            </li>
+        
+        </ul>
+        <button className={`${
+                path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
+              } mt-8 w-full py-4 text-[#] rounded-xl text-[32px] tracking-wider font-bold`}>
+              <Link onClick={() => setShowMenu(!showMenu)} href="/contact">
+                Contact Us
+                </Link>
+              </button>
+      </div>
+
+</div>
+
     </>
   );
 }
