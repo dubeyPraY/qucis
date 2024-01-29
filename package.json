@@ -13,9 +13,13 @@
     "@splinetool/runtime": "^1.0.17",
     "gsap": "^3.12.4",
     "next": "14.0.3",
+    "photoswipe": "^5.4.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-grid-gallery": "^1.0.1-alpha.0",
     "react-icons": "^4.12.0",
+    "react-photoswipe-gallery": "^3.0.1",
+    "react-preloaders": "^3.0.3",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
     "react-spinners": "^0.13.8"
