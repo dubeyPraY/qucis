@@ -32,8 +32,9 @@ import 'photoswipe/style.css';
 const GalleryGrid = () => {
 
    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#my-gallery',
+      gallery: '#my-gallery--zoom-transition',
       children: 'a',
+      showHideAnimationType: 'zoom',
       pswpModule: () => import('photoswipe')
     });
     lightbox.init();
@@ -48,11 +49,14 @@ const GalleryGrid = () => {
    return(  
    <Item
    key={index}
-    id={image}
+    id={`${index}`}
     caption={image.caption}
       original={image.src}
       width="1024"
       height="768"
+
+    
+      className="max-w-[500px]"
     >
       {({ ref, open }) => (
         <img ref={ref} onClick={open} height={400} src={image.src}  className='object-cover aspect-[4/3] shadow-lg cursor-pointer'/>
