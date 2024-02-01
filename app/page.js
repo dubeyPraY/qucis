@@ -9,7 +9,6 @@ import Preloader from '@/components/Preloader'
 import { preLoaderAnim } from '@/animations'
 import SubstackFeed from '@/components/Substack'
 import { useRouter } from 'next/navigation'
-import AnimatedBg from '@/components/AnimatedBg'
 
 export default function Home() {
 const [loading, setLoading] = useState(true)
@@ -25,12 +24,12 @@ useEffect(() => {
 
  return (
     <main className="">
-  <AnimatedBg />
 
-{/* <Preloader ref={ref} /> */}
+
+<Preloader ref={ref} />
  
         <>
-    <div className='w-full py-20 min-h-[80vh] lg:p-20 lg:h-[100vh]  lg:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
+    <div className='w-full py-20 min-h-[80vh] lg:p-20  lg:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
       <div className=' w-[80%]  flex md:flex-row flex-col justify-between items-center'>
         <div className='  md:w-[45%]'>
           <h1 className='mainHeading text-[72px] lg:text-[128px] font-bj'>QuCIS<span>.</span></h1>
@@ -74,8 +73,7 @@ useEffect(() => {
             <h1 className='font-bj font-extrabold text-[40px] md:text-[48px] italic secondHeading text-[#2B1038]'>
               Our Mission
             </h1>
-            <p className='secondPara text-[#2B1038] md:text-[24px] leading-[26px] md:leading-[30px] text-[15px]'>
-              Our mission involves pioneering quantum algorithms, pushing the limits of computational possibilities and striving for quantum advantage in problem-solving.Exploring quantum computing applications in diverse fields, from biology to finance, we aim to unleash the transformative potential of quantum technologies.
+            <p className='secondPara text-[#2B1038] md:text-[24px] leading-[26px] md:leading-[33px] text-[15px]'>Our mission involves pioneering quantum algorithms, pushing the limits of computational possibilities and striving for quantum advantage in problem-solving.Exploring quantum computing applications in diverse fields, from biology to finance, we aim to unleash the transformative potential of quantum technologies.
 
             </p>
 
