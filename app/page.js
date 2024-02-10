@@ -15,10 +15,10 @@ const [loading, setLoading] = useState(true)
 
 const ref = useRef(null)
 
-useEffect(() => {
-  preLoaderAnim()
+// useEffect(() => {
+//   preLoaderAnim()
   
-}, [])
+// }, [])
 
 
 
@@ -26,7 +26,7 @@ useEffect(() => {
     <main className="">
 
 
-<Preloader ref={ref} />
+{/* <Preloader ref={ref} />/ */}
  
         <>
     <div className='w-full py-20 min-h-[80vh] lg:p-20  lg:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
@@ -36,8 +36,11 @@ useEffect(() => {
           <p className='font-source font-extralight md:mt-[20px] text-white/70 tracking-[0.48px] md:leading-[33px] md:text-[20px] drop-shadow-md'>
             Quantum Computing and Information Systems,  A Research Group focused on Quantum information theory and coding, Quantum algorithms.
             </p>
+            <Link href='/about'>
           <button className='flex gap-4 justify-between items-center mt-[30px] md:mt-[60px] px-[25px] md:px-[30px] py-[16px] text-[15px] md:text-[20px] font-semibold bg-white rounded-full font-source main_btn hover:brightness-90 transition-all'>
-            <h1>KNOW US</h1>
+            <h1>
+              KNOW US
+            </h1>
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
               <path d="M2 2L7 7L2 12" stroke="url(#paint0_linear_66_43)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               <defs>
@@ -48,11 +51,10 @@ useEffect(() => {
               </defs>
             </svg>
           </button>
+              </Link>
         </div>
         <div className='threedmodel'>
-        {/* <script src="https://substackapi.com/embeds/feed.js" async></script> */}
-        {/* <SubstackFeed /> */}
-
+        
 
 
           {/* <SplineModel /> */}
@@ -65,6 +67,12 @@ useEffect(() => {
 
     </div>
 
+
+
+
+
+
+{/* SECOND SECTION  */}
       <div className="w-full py-24 md:py-[200px]    bg-[url('/figmaStuffs/secondBg.png')] bg-cover grid place-items-center">
         
         <div className=' w-[80%] flex md:flex-row flex-col justify-around items-center gap-12'>
@@ -121,12 +129,29 @@ useEffect(() => {
 
         </div>
         </div>
+
+
+
+
+<div className='w-full px-4 py-24 flex flex-col items-center justify-center gap-12'>
+<div>
+<h1 className='font-bold text-3xl md:text-5xl text-center'>Latest News.</h1>
+<h3 className='italic mt-4'>Check out some recent news about quantum computing...</h3>
+</div>
+
+<script src="https://substackapi.com/embeds/feed.js" async></script>
+        <SubstackFeed />
+
+</div>
+
+
+
 {/* FOURTH SECTION */}
 {/* CAROUSEL SECTION */}
-        <div className="  bg-[url('/figmaStuffs/secondBg.png')] bg-cover grid place-items-center py-24">
+        <div className="  carousel_bg bg-cover grid place-items-center py-24">
           <div className='  grid place-items-center justify-center text-center  gap-12 mt-12'>
-            <h1 className='font-bj text-[48px] md:text-[72px] font-semibold  '>OUR RECENT EVENTS</h1>
-              <div className=' w-full border flex items-center justify-center  relative  '>
+            <h1 className='font-bj text-[48px] md:text-[72px] font-semibold text-purple-600   drop-shadow-lg  '>OUR RECENT EVENTS</h1>
+              <div className='w-full background-opacity-50 backdrop-blur-[10px] bg-white/60  rounded-[24px] shadow-lg flex items-center justify-center relative'>
                 <ImageCarousel />
               </div>
 
