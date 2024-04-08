@@ -9,7 +9,7 @@ import Preloader from '@/components/Preloader'
 import { preLoaderAnim } from '@/animations'
 import SubstackFeed from '@/components/Substack'
 import { useRouter } from 'next/navigation'
-
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 export default function Home() {
 const [loading, setLoading] = useState(true)
 
@@ -29,16 +29,20 @@ const ref = useRef(null)
 {/* <Preloader ref={ref} />/ */}
  
         <>
-    <div className='w-full py-20 min-h-[80vh] lg:p-20  lg:py-48  bg-[url(/figmaStuffs/mainBg.png)] bg-cover grid place-items-center '>
-      <div className=' w-[80%]  flex md:flex-row flex-col justify-between items-center'>
-        <div className='  md:w-[45%]'>
+        <BackgroundGradientAnimation>
+
+  
+
+
+      <div className="absolute min-h-screen inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+      <div className='  md:w-[45%]  z-50'>
           <h1 className='mainHeading text-[72px] lg:text-[128px] font-bj'>QuCIS<span>.</span></h1>
           <p className='font-source font-extralight md:mt-[20px] text-white/70 tracking-[0.48px] md:leading-[33px] md:text-[20px] drop-shadow-md'>
             Quantum Computing and Information Systems,  A Research Group focused on Quantum information theory and coding, Quantum algorithms.
             </p>
             <Link href='/about'>
-          <button className='flex gap-4 justify-between items-center mt-[30px] md:mt-[60px] px-[25px] md:px-[30px] py-[16px] text-[15px] md:text-[20px] font-semibold bg-white rounded-full font-source main_btn hover:brightness-90 transition-all'>
-            <h1>
+          <button className='flex mx-auto gap-4 justify-between items-center mt-[30px] md:mt-[60px] px-[25px] md:px-[30px] py-[16px] text-[15px] md:text-[20px] font-semibold bg-white rounded-full font-source main_btn hover:brightness-90 transition-all'>
+            <h1 className='text-black'>
               KNOW US
             </h1>
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
@@ -53,19 +57,11 @@ const ref = useRef(null)
           </button>
               </Link>
         </div>
-        <div className='threedmodel'>
-        
-
-
-          {/* <SplineModel /> */}
-        </div>
-
-
-
-        
       </div>
 
-    </div>
+
+    {/* </div> */}
+    </BackgroundGradientAnimation>
 
 
 
@@ -154,7 +150,6 @@ const ref = useRef(null)
               <div className='w-full background-opacity-50 backdrop-blur-[10px] bg-white/60  rounded-[24px] shadow-lg flex items-center justify-center relative'>
                 <ImageCarousel />
               </div>
-
 
           </div>
         </div>

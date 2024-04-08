@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className=" absolute px-12 w-full h-[15vh] flex justify-between items-center  text-lg font-regular ">
+      <nav className="  z-[100] top-0 absolute left-0 px-12 w-full h-[15vh]  flex justify-between items-center  text-lg font-regular ">
         <div className={` font-bj font-bold text-[32px] ${
                 path === "/" ? "text-[#DE97FF]" : "text-white"
               }`}>
