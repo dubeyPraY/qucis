@@ -40,7 +40,6 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       setLoading(true);
-
       window.SubstackFeedWidget = {
         substackUrl: "quantumpirates.substack.com",
         posts: 3,
@@ -53,12 +52,19 @@ useEffect(() => {
           background: "white",
         }
       }
-
       const script = document.createElement("script");
       script.src = "https://substackapi.com/embeds/feed.js";
       script.async = true;
-
-      document.getElementById("substack-feed-embed").appendChild(script);
+      const embedElement = document.getElementById("substack-feed-embed");
+      if (embedElement) {
+        embedElement.appendChild(script);
+        return () => {
+          // Clean up script when the component unmounts
+          if (embedElement.contains(script)) {
+            embedElement.removeChild(script);
+          }
+        };
+      }
     } finally {
       setLoading(false);
     }
@@ -68,8 +74,13 @@ useEffect(() => {
 
   return () => {
     // Clean up script when the component unmounts
-    const scriptElement = document.getElementById("substack-feed-embed").querySelector("script");
-    document.getElementById("substack-feed-embed").removeChild(scriptElement);
+    const embedElement = document.getElementById("substack-feed-embed");
+    if (embedElement) {
+      const scriptElement = embedElement.querySelector("script");
+      if (scriptElement) {
+        embedElement.removeChild(scriptElement);
+      }
+    }
   };
 }, []);
 

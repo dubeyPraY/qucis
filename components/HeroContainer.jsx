@@ -13,7 +13,7 @@ const HeroContainer = () => {
             <h1 className="mainHeading text-[72px] lg:text-[128px] font-bj z-50">
               QuCIS<span>.</span>
             </h1>
-            <p className="font-source font-extralight md:mt-[20px] text-white/70 tracking-[0.48px] md:leading-[33px] md:text-[20px] drop-shadow-md">
+            <p className="font-source font-extralight md:mt-[20px] text-white/70 tracking-[0.48px] md:leading-[33px] px-12 text-sm md:text-[20px] drop-shadow-md">
               Quantum Computing and Information Systems, A Research Group
               focused on Quantum information theory and coding, Quantum
               algorithms.

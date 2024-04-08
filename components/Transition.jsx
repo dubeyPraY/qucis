@@ -9,7 +9,7 @@ export default function Transition({children}){
         <motion.div
             initial={{y:50, opacity: 0}}
             animate={{y:0, opacity: 1}}
-            transition={{ease: "easeInOut", duration: 0.75}}
+            transition={{type: "spring", stiffness: 100, duration: 1}}
         >
             {children}
         </motion.div>

@@ -119,8 +119,8 @@ export default function Navbar() {
 
 
 
-      <div className={`bg-violet-500 z-[100] px-6 py-6 absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${showMenu ? "top-[0vh]" : "top-[-100vh]"} transition-all bg-white z-10 ease-linear`}>
-      <div className="p-4  flex items-center justify-between">
+      <div className={`bg-violet-700  z-[100] px-6 py-6 absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${showMenu ? "top-[0vh]" : "top-[-100vh]"} transition-all bg-white z-10 ease-linear`}>
+      <div className="p-4  flex items-center justify-between ">
         <h1 className={`font-bj font-bold text-[32px] drop-shadow-lg ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white"
               }`}>
@@ -129,7 +129,7 @@ export default function Navbar() {
 </h1>
       <IoCloseOutline className="text-[32px] text-white " onClick={() => setShowMenu(!showMenu)} />
       </div>
-      <div className="p-4 mt-6">
+      <div className="p-4 mt-6 ">
         <ul className="text-white font-source font-bold text-[32px] tracking-wide grid gap-2">
         <li
               className={` ${

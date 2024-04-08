@@ -1,21 +1,21 @@
 "use client"
 import React from 'react'
 import '@/styles/preloader.scss'
-
+import { motion } from 'framer-motion'
 
 const Preloader = () => {
   return (
 
 
-      <div className="preloader">
-        <div className="texts-container">
-
-                <span>QuCIS</span>
-                <span>QuCIS</span>
-                <span>QuCIS</span>  
-
+      <motion.div className="preloader"
+      initial={{y: 0,opacity: 1}}
+      animate={{y: 100,opacity: 0}}
+      transition={{duration: 3}}
+      >
+        <div className="text-white font-black texts-container">
+          Qucis
         </div>
-      </div>
+      </motion.div>
 
   )
 }

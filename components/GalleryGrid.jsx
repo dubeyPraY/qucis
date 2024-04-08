@@ -28,6 +28,7 @@ const images = [
 
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
+import Image from 'next/image';
 
 const GalleryGrid = () => {
 
@@ -55,7 +56,7 @@ const GalleryGrid = () => {
       height="768"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} height={400} src={image.src}  className='object-cover hover:scale-110 transition-all aspect-[4/3] shadow-lg cursor-pointer'/>
+        <Image ref={ref} onClick={open} height={400} width={500} src={image.src} className='object-cover hover:scale-110 transition-all aspect-[4/3] shadow-lg cursor-pointer'/>
       )}
     </Item>
 )})}    

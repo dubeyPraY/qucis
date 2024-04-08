@@ -3,10 +3,10 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
+    <div className='min-h-screen overflow-x-hidden'>
       <BackgroundGradientAnimation>
-    <div className='w-full h-[100vh]  bg-cover grid place-items-center text-white text-4xl'>
-    ABOUT PAGE
+    <div className='w-full h-[100vh]  bg-cover grid place-items-center font-black text-white text-4xl'>
+    COMING SOON!!
     </div>
     </BackgroundGradientAnimation>
     </div>

@@ -13,13 +13,23 @@ import HeroAboutContainer from "@/components/HeroAboutContainer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  useEffect(() => {
 
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }
+    , 5000);
+
+    return () => clearTimeout(timer);
+  })
   const ref = useRef(null);
   return (
-    <main className="">
+  
 
 
       <>
+      {/* {loading ? <Preloader /> :  */}
+      <main>
         <HeroContainer />
 
         {/* SECOND SECTION  */}
@@ -64,11 +74,8 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <img
-              src="/figmaStuffs/imgComponent2.png"
-              alt=""
-              className="aspect-square md:h-[400px]"
-            />
+            <div className='w-[400px] h-[400px] bg-[url(/members/AnkurRaina.jpeg)] bg-cover   shadow-[15px_15px_0px_0px_rgba(209,0,209)]'></div>
+
           </div>
         </div>
 
@@ -98,7 +105,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </main>
+        {/* } */}
       </>
-    </main>
+
   );
 }
