@@ -1,14 +1,17 @@
+import Transition from "@/components/Transition";
 import React from "react";
 
 const Contact = () => {
   return (
     <div className="w-full  bg-[url('/figmaStuffs/teambg.png')] bg-cover md:p-24 p-6 ">
+      <Transition>
+        <div>
     <div className='w-full py-24 md:p-24 flex items-center justify-center'>
       <h1 className=' teamHeading text-[55px] md:text-[96px] drop-shadow-lg z-0'>
         Contact Us.
       </h1>
     </div>
-
+    
     <div>
         <div className="text-white md:px-12  ">
         <h1 className='text-[30px] md:text-[40px] tex font-semibold font-bj'>Dr. Ankur Raina</h1>
@@ -49,7 +52,8 @@ const Contact = () => {
 
 
 
-
+    </div>
+    </Transition>
     </div>
   );
 };

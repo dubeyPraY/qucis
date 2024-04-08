@@ -55,7 +55,7 @@ const GalleryGrid = () => {
       height="768"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} height={400} src={image.src}  className='object-cover aspect-[4/3] shadow-lg cursor-pointer'/>
+        <img ref={ref} onClick={open} height={400} src={image.src}  className='object-cover hover:scale-110 transition-all aspect-[4/3] shadow-lg cursor-pointer'/>
       )}
     </Item>
 )})}    

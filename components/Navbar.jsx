@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="  z-[100] top-0 absolute left-0 px-12 w-full h-[15vh]  flex justify-between items-center  text-lg font-regular ">
+      <nav className="  z-[100] top-0 absolute left-0 px-12 w-full h-[15vh] bg-gradient-to-t from-[rgb(108` 0 162)] to-red-500  flex justify-between items-center  text-lg font-regular ">
         <div className={` font-bj font-bold text-[32px] ${
                 path === "/" ? "text-[#DE97FF]" : "text-white"
               }`}>
@@ -119,9 +119,9 @@ export default function Navbar() {
 
 
 
-      <div className={`bg-[url(/figmaStuffs/mobilemenu.png)] bg-cover absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${showMenu ? "top-[0vh]" : "top-[-100vh]"} transition-all bg-white z-10 ease-linear`}>
+      <div className={`bg-violet-500 z-[100] px-6 py-6 absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${showMenu ? "top-[0vh]" : "top-[-100vh]"} transition-all bg-white z-10 ease-linear`}>
       <div className="p-4  flex items-center justify-between">
-        <h1 className={`font-bj font-bold text-[32px] shadow-lg ${
+        <h1 className={`font-bj font-bold text-[32px] drop-shadow-lg ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white"
               }`}>
 

@@ -1,3 +1,4 @@
+import Transition from '@/components/Transition'
 import React from 'react'
 
 const Publications = () => {
@@ -131,6 +132,7 @@ const Publications = () => {
         <div className="w-full   bg-[url('/figmaStuffs/teambg.png')] bg-cover md:px-0 py-6">
 
             <div className='py-12 md:px-0 px-6'>
+                <Transition>
             <div className='w-full  mt-24 md:mt-32 md:px-24  grid  items-center justify-left'>
               <h1 className=' teamHeading text-[32px] md:text-[64px] drop-shadow-lg'>
               Journal Publications.
@@ -145,6 +147,7 @@ const Publications = () => {
                 ))}
               </ol>
             </div>
+            </Transition>
             </div>
 
             {/* CONFERENCE PUBLIICATIONS */}
@@ -211,3 +214,14 @@ const Publications = () => {
 }
 
 export default Publications
+
+
+const PublicationLinks = ((publication)=> {
+    return(
+        <li className='text-[#a453c6]' key={publication.id}>
+                        {publication.id}. <a href={publication.link} target='_blank' rel="noreferrer" className='hover:text-[#a453c6]/50'>
+                            {publication.title}
+                        </a>
+                    </li>
+    )
+})
