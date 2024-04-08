@@ -1,5 +1,6 @@
 "use client";
 import { preLoaderAnim } from "@/animations";
+import Background from "@/components/Background";
 import Spinner from "@/components/Spinner";
 import Transition from "@/components/Transition";
 import React, { useEffect } from "react";
@@ -74,7 +75,8 @@ const Team = () => {
   ];
 
   return (
-    <div className="w-full  bg-[url('/figmaStuffs/teambg.png')] bg-cover md:p-24 p-6 ">
+      <Background>
+    <div className="w-full md:p-24 p-6 ">
       <Transition>
         <div className="w-full py-24 md:p-24 flex items-center justify-center">
           <h1 className=" teamHeading text-[55px] md:text-[96px] drop-shadow-lg">
@@ -139,6 +141,7 @@ const Team = () => {
         ))}
       </Transition>
     </div>
+      </Background>
   );
 };
 
