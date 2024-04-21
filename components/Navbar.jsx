@@ -8,10 +8,9 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
 
-
 export default function Navbar() {
   const path = usePathname();
-  const router = useRouter()
+  const router = useRouter();
 
   // CONDITIONALLY RENDERING HAMBURGER AND NAVBAR THROUGH WINDOW SCREEN SIZE
   // const [isDesktop, setDesktop] = useState(false);
@@ -33,110 +32,115 @@ export default function Navbar() {
   //   return () => window.removeEventListener("resize", updateMedia);
   // }, [isDesktop, router]);
 
-
-// SHOW MENU ON CLICK LOGIC
-  const [showMenu, setShowMenu] = useState(false)
-
-
-
+  // SHOW MENU ON CLICK LOGIC
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <>
-      <nav className="  z-[100] top-0 absolute left-0 px-12 w-full h-[15vh] bg-gradient-to-t from-[rgb(108` 0 162)] to-red-500  flex justify-between items-center  text-lg font-regular ">
-        <div className={` font-bj font-bold text-[32px] ${
-                path === "/" ? "text-[#DE97FF]" : "text-white"
-              }`}>
-        <Link href='/' >
-          QuCIS
-        </Link>
+      <nav className="  z-[100] top-0 absolute left-0 px-12 w-full h-[15vh] font-sans  flex justify-between items-center  text-lg font-regular ">
+        <div
+          className={` font-bj font-bold text-[32px] ${
+            path === "/" ? "text-[#DE97FF]" : "text-white"
+          }`}
+        >
+          <Link href="/">QuCIS</Link>
         </div>
         {/* {isDesktop ? ( */}
-          <ul className=" flex flex-col lg:flex-row  gap-12 items-center font-source lg:visible invisible">
+        <ul className=" flex flex-col lg:flex-row  gap-6 text-md font-regular font-source items-center  lg:visible invisible">
+          <li
+            className={` ${
+              path === "/about" ? "text-[#DE97FF]" : "text-white"
+            }`}
+          >
+            <Link href="/about">About</Link>
+          </li>
+          <li
+            className={` ${path === "/team" ? "text-[#DE97FF]" : "text-white"}`}
+          >
+            <Link href="/team">Team</Link>
+          </li>
+          <li
+            className={` ${
+              path === "/publications" ? "text-[#DE97FF]" : "text-white"
+            }`}
+          >
+            <Link href="/publications">Publications</Link>
+          </li>
+
+          <li
+            className={` ${
+              path === "/funding" ? "text-[#DE97FF]" : "text-white"
+            }`}
+          >
+            <Link href="/funding">Funding</Link>
+          </li>
+          <li
+            className={` ${
+              path === "/resources" ? "text-[#DE97FF]" : "text-white"
+            }`}
+          >
+            <Link href="/resources">Resources</Link>
+          </li>
+          <li
+            className={` ${
+              path === "/gallery" ? "text-[#DE97FF]" : "text-white"
+            }`}
+          >
+            <Link href="/gallery">Gallery</Link>
+          </li>
+          <Link href="/contact">
             <li
-              className={` ${
-                path === "/about" ? "text-[#DE97FF]" : "text-white"
+              className={`contact_btn rounded-full cursor-pointer transition-all ${
+                path === "/contact"
+                  ? "bg-white text-[#9717E5]"
+                  : "text-white bg-[#9717E5]"
               }`}
             >
-              <Link href="/about">About</Link>
-            </li>
-            <li
-              className={` ${
-                path === "/team" ? "text-[#DE97FF]" : "text-white"
-              }`}
-            >
-              <Link href="/team">Team</Link>
-            </li>
-            <li
-              className={` ${
-                path === "/publications" ? "text-[#DE97FF]" : "text-white"
-              }`}
-            >
-              <Link href="/publications">Publications</Link>
-            </li>
-            
-            <li
-              className={` ${
-                path === "/funding" ? "text-[#DE97FF]" : "text-white"
-              }`}
-            >
-              <Link href="/funding">Funding</Link>
-            </li>
-            <li
-              className={` ${
-                path === "/resources" ? "text-[#DE97FF]" : "text-white"
-              }`}
-            >
-              <Link href="/resources">Resources</Link>
-            </li>
-            <li
-              className={` ${
-                path === "/gallery" ? "text-[#DE97FF]" : "text-white"
-              }`}
-            >
-              <Link href="/gallery">Gallery</Link>
-            </li>
-            <Link href="/contact">
-            <li className={`contact_btn cursor-pointer transition-all ${
-                path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
-              }`}>
               Contact
             </li>
-            </Link>
-          </ul>
+          </Link>
+        </ul>
         {/*  ) : ( */}
-        
+
         {/*  )} */}
-            <div className=" lg:invisible visible absolute right-12">
-            <GiHamburgerMenu color="#fff" onClick={() => setShowMenu(!showMenu)} />
-          </div>
-
-
-
+        <div className=" lg:invisible visible absolute right-12">
+          <GiHamburgerMenu
+            color="#fff"
+            onClick={() => setShowMenu(!showMenu)}
+          />
+        </div>
       </nav>
 
-
-
-
-
-
-      <div className={`bg-violet-700  z-[100] px-6 py-6 absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${showMenu ? "top-[0vh]" : "top-[-100vh]"} transition-all bg-white z-10 ease-linear`}>
-      <div className="p-4  flex items-center justify-between ">
-        <h1 className={`font-bj font-bold text-[32px] drop-shadow-lg ${
-                path === "/about" ? "text-[#DE97FF]" : "text-white"
-              }`}>
-
-              <Link onClick={() => setShowMenu(!showMenu)} href="/">QuCIS</Link>
-</h1>
-      <IoCloseOutline className="text-[32px] text-white " onClick={() => setShowMenu(!showMenu)} />
-      </div>
-      <div className="p-4 mt-6 ">
-        <ul className="text-white font-source font-bold text-[32px] tracking-wide grid gap-2">
-        <li
+      <div
+        className={`bg-violet-700  z-[100] px-6 py-6 absolute h-[100vh] top-[-100vh] left-0 w-full origin-top ${
+          showMenu ? "top-[0vh]" : "top-[-100vh]"
+        } transition-all  z-10 ease-linear`}
+      >
+        <div className="p-4  flex items-center justify-between ">
+          <h1
+            className={`font-bj font-bold text-[32px] drop-shadow-lg ${
+              path === "/about" ? "text-[#DE97FF]" : "text-white"
+            }`}
+          >
+            <Link onClick={() => setShowMenu(!showMenu)} href="/">
+              QuCIS
+            </Link>
+          </h1>
+          <IoCloseOutline
+            className="text-[32px] text-white "
+            onClick={() => setShowMenu(!showMenu)}
+          />
+        </div>
+        <div className="p-4 mt-6 ">
+          <ul className="text-white font-source  text-lg tracking-wide grid gap-2">
+            <li
               className={` ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white"
               }`}
             >
-              <Link onClick={() => setShowMenu(!showMenu)} href="/about">About</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} href="/about">
+                About
+              </Link>
             </li>
 
             <li
@@ -144,21 +148,27 @@ export default function Navbar() {
                 path === "/publications" ? "text-[#DE97FF]" : "text-white"
               }`}
             >
-              <Link onClick={() => setShowMenu(!showMenu)} href="/publications">Publications</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} href="/publications">
+                Publications
+              </Link>
             </li>
             <li
               className={` ${
                 path === "/team" ? "text-[#DE97FF]" : "text-white"
               }`}
             >
-              <Link onClick={() => setShowMenu(!showMenu)} href="/team">Team</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} href="/team">
+                Team
+              </Link>
             </li>
             <li
               className={` ${
                 path === "/funding" ? "text-[#DE97FF]" : "text-white"
               }`}
             >
-              <Link onClick={() => setShowMenu(!showMenu)} href="/funding">Funding</Link>
+              <Link onClick={() => setShowMenu(!showMenu)} href="/funding">
+                Funding
+              </Link>
             </li>
             <li
               className={` ${
@@ -174,23 +184,21 @@ export default function Navbar() {
             >
               <Link href="/gallery">Gallery</Link>
             </li>
+          </ul>
 
-
-        </ul>
-
-        <Link onClick={() => setShowMenu(!showMenu)} href="/contact">
-
-        <button className={`${
-                path === "/contact" ? "bg-white text-[#9717E5]" : "text-white bg-[#9717E5]"
-              } mt-10 w-full py-3 rounded-xl text-[32px] tracking-wider font-bold font-source`}>
-                Contact Us
-              </button>
-              </Link>
-
+          <Link onClick={() => setShowMenu(!showMenu)} href="/contact">
+            <button
+              className={`${
+                path === "/contact"
+                  ? "bg-white text-[#9717E5]"
+                  : "text-white bg-[#9717E5]"
+              } mt-10 w-full py-3 rounded-full text-lg font-bold font-source`}
+            >
+              Contact Us
+            </button>
+          </Link>
+        </div>
       </div>
-
-</div>
-
     </>
   );
 }

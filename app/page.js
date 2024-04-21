@@ -10,6 +10,7 @@ import SubstackFeed from "@/components/Substack";
 import { useRouter } from "next/navigation";
 import HeroContainer from "@/components/HeroContainer";
 import HeroAboutContainer from "@/components/HeroAboutContainer";
+import HeroTeamContainer from "@/components/HeroTeamContainer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -34,50 +35,7 @@ export default function Home() {
 
         {/* SECOND SECTION  */}
         <HeroAboutContainer />
-        <div className="w-full py-24 md:p-0 md:py-[200px] border bg-gradient-to-r from-[#3F2B49] to-[#9533C4] bg-cover grid place-items-center">
-          <div className="w-[80%]  flex md:flex-row  flex-col-reverse justify-around  gap-12 items-center ">
-            <div className="md:w-[45%] flex flex-col gap-6   ">
-              <h1 className="text-white font-bj font-extrabold text-[40px] md:text-[48px] italic secondHeading">
-                Our Team
-              </h1>
-              <p className="secondPara text-[20px] md:text-[24px] text-white font-source font-light">
-                This Lab is head by <b>Dr. Ankur Raina</b>, who works as an
-                Assistant Professor in{" "}
-                <b>the Department of EECS, IISER Bhopal</b>. He worked as a
-                researcher/scientist at{" "}
-                <b>
-                  the Department of Electrical and Computer Engineering,
-                  University of Arizona
-                </b>{" "}
-                with <b>Prof. Bane Vasic</b>.
-              </p>
-              <Link href="/team">
-                <button className="text-white mt-12 shadow-lg w-full md:w-[180px] bg-[#9717E5] rounded-[50px] px-[30px] py-[16px] font-semibold gap-[15px]  font-source flex items-center justify-center md:justify-around hover:bg-[#9717E5]/80 transition-all">
-                  <h1 className="text-[18px] drop-shadow-md tracking-[0.5px]">
-                    Know Us
-                  </h1>
-                  <svg
-                    width="9"
-                    height="14"
-                    viewBox="0 0 9 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2 2L7 7L2 12"
-                      stroke="#FFFFFF"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </Link>
-            </div>
-            <div className='w-[400px] h-[400px] bg-[url(/members/AnkurRaina.jpeg)] bg-cover   shadow-[15px_15px_0px_0px_rgba(209,0,209)]'></div>
-
-          </div>
-        </div>
+        <HeroTeamContainer />
 
         <div className="w-full px-4 py-24 flex flex-col items-center justify-center gap-12">
           <div>

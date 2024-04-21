@@ -8,12 +8,12 @@ const HeroContainer = () => {
       <BackgroundGradientAnimation>
         <div className="absolute z-50 min-h-screen inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
           <Transition>
-          <div className=" mx-auto  md:w-[45%]  z-50">
+          <div className=" mx-auto  md:w-[60%]  z-50">
 
-            <h1 className="mainHeading text-[72px] lg:text-[128px] font-bj z-50">
+            <h1 className="mainHeading text-[72px] lg:text-[140px] font-extrabold font-bj z-50">
               QuCIS<span>.</span>
             </h1>
-            <p className="font-source font-extralight md:mt-[20px] text-white/70 tracking-[0.48px] md:leading-[33px] px-12 text-sm md:text-[20px] drop-shadow-md">
+            <p className="font-source font-light md:mt-[20px] text-white/70  md:leading-[30px] px-12 text-sm md:text-[20px] drop-shadow-md">
               Quantum Computing and Information Systems, A Research Group
               focused on Quantum information theory and coding, Quantum
               algorithms.
