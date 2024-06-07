@@ -37,31 +37,31 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="  z-[100] top-0 absolute left-0 px-12 w-full h-[15vh] font-sans  flex justify-between items-center  text-lg font-regular ">
+      <nav className=" font-asans z-[100] top-0 absolute left-0 px-12 w-full h-[15vh]   flex justify-between items-center  text-lg font-regular ">
         <div
-          className={` font-bj font-bold text-[32px] ${
-            path === "/" ? "text-[#DE97FF]" : "text-white"
+          className={` font-asans font-bold text-[32px] ${
+            path === "/" ? "text-[#DE97FF]" : "text-white/80"
           }`}
         >
           <Link href="/">QuCIS</Link>
         </div>
         {/* {isDesktop ? ( */}
-        <ul className=" flex flex-col lg:flex-row  gap-6 text-md font-regular font-source items-center  lg:visible invisible">
+        <ul className=" flex flex-col lg:flex-row  gap-6 text-md font-regular font-asans items-center  lg:visible invisible">
           <li
             className={` ${
-              path === "/about" ? "text-[#DE97FF]" : "text-white"
+              path === "/about" ? "text-[#DE97FF]" : "text-white/80"
             }`}
           >
             <Link href="/about">About</Link>
           </li>
           <li
-            className={` ${path === "/team" ? "text-[#DE97FF]" : "text-white"}`}
+            className={` ${path === "/team" ? "text-[#DE97FF]" : "text-white/80"}`}
           >
             <Link href="/team">Team</Link>
           </li>
           <li
             className={` ${
-              path === "/publications" ? "text-[#DE97FF]" : "text-white"
+              path === "/publications" ? "text-[#DE97FF]" : "text-white/80"
             }`}
           >
             <Link href="/publications">Publications</Link>
@@ -69,21 +69,21 @@ export default function Navbar() {
 
           <li
             className={` ${
-              path === "/funding" ? "text-[#DE97FF]" : "text-white"
+              path === "/funding" ? "text-[#DE97FF]" : "text-white/80"
             }`}
           >
             <Link href="/funding">Funding</Link>
           </li>
           <li
             className={` ${
-              path === "/resources" ? "text-[#DE97FF]" : "text-white"
+              path === "/resources" ? "text-[#DE97FF]" : "text-white/80"
             }`}
           >
             <Link href="/resources">Resources</Link>
           </li>
           <li
             className={` ${
-              path === "/gallery" ? "text-[#DE97FF]" : "text-white"
+              path === "/gallery" ? "text-[#DE97FF]" : "text-white/80"
             }`}
           >
             <Link href="/gallery">Gallery</Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
               className={`contact_btn rounded-full cursor-pointer transition-all ${
                 path === "/contact"
                   ? "bg-white text-[#9717E5]"
-                  : "text-white bg-[#9717E5]"
+                  : "text-white/80 bg-[#9717E5]"
               }`}
             >
               Contact
@@ -118,8 +118,8 @@ export default function Navbar() {
       >
         <div className="p-4  flex items-center justify-between ">
           <h1
-            className={`font-bj font-bold text-[32px] drop-shadow-lg ${
-              path === "/about" ? "text-[#DE97FF]" : "text-white"
+            className={`font-asans font-bold text-[32px] drop-shadow-lg ${
+              path === "/about" ? "text-black" : "text-white/80"
             }`}
           >
             <Link onClick={() => setShowMenu(!showMenu)} href="/">
@@ -127,15 +127,15 @@ export default function Navbar() {
             </Link>
           </h1>
           <IoCloseOutline
-            className="text-[32px] text-white "
+            className="text-[32px] text-white/80 "
             onClick={() => setShowMenu(!showMenu)}
           />
         </div>
         <div className="p-4 mt-6 ">
-          <ul className="text-white font-source  text-lg tracking-wide grid gap-2">
+          <ul className="text-white/80 font-asans  text-lg tracking-wide grid gap-2">
             <li
               className={` ${
-                path === "/about" ? "text-[#DE97FF]" : "text-white"
+                path === "/about" ? "text-[#DE97FF]" : "text-white/80"
               }`}
             >
               <Link onClick={() => setShowMenu(!showMenu)} href="/about">
@@ -145,7 +145,7 @@ export default function Navbar() {
 
             <li
               className={` ${
-                path === "/publications" ? "text-[#DE97FF]" : "text-white"
+                path === "/publications" ? "text-[#DE97FF]" : "text-white/80"
               }`}
             >
               <Link onClick={() => setShowMenu(!showMenu)} href="/publications">
@@ -154,7 +154,7 @@ export default function Navbar() {
             </li>
             <li
               className={` ${
-                path === "/team" ? "text-[#DE97FF]" : "text-white"
+                path === "/team" ? "text-[#DE97FF]" : "text-white/80"
               }`}
             >
               <Link onClick={() => setShowMenu(!showMenu)} href="/team">
@@ -163,7 +163,7 @@ export default function Navbar() {
             </li>
             <li
               className={` ${
-                path === "/funding" ? "text-[#DE97FF]" : "text-white"
+                path === "/funding" ? "text-[#DE97FF]" : "text-white/80"
               }`}
             >
               <Link onClick={() => setShowMenu(!showMenu)} href="/funding">
@@ -172,14 +172,14 @@ export default function Navbar() {
             </li>
             <li
               className={` ${
-                path === "/resources" ? "text-[#DE97FF]" : "text-white"
+                path === "/resources" ? "text-[#DE97FF]" : "text-white/80"
               }`}
             >
               <Link href="/resources">Resources</Link>
             </li>
             <li
               className={` ${
-                path === "/gallery" ? "text-[#DE97FF]" : "text-white"
+                path === "/gallery" ? "text-[#DE97FF]" : "text-white/80"
               }`}
             >
               <Link href="/gallery">Gallery</Link>
@@ -191,8 +191,8 @@ export default function Navbar() {
               className={`${
                 path === "/contact"
                   ? "bg-white text-[#9717E5]"
-                  : "text-white bg-[#9717E5]"
-              } mt-10 w-full py-3 rounded-full text-lg font-bold font-source`}
+                  : "text-white/80 bg-[#9717E5]"
+              } mt-10 w-full py-3 rounded-full text-lg font-bold font-asans`}
             >
               Contact Us
             </button>

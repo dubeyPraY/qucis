@@ -3,7 +3,10 @@
 import React, { useEffect, useState } from 'react';
 import Spinner from './Spinner';
 import { BarLoader } from 'react-spinners';
+import axios from 'axios';
+import { GiArrowhead } from 'react-icons/gi';
 
+import { FaArrowRight } from "react-icons/fa";
 const SubstackFeed = () => {
   const [loading, setLoading] = useState(true)
 //   useEffect(() => {
@@ -35,61 +38,50 @@ const SubstackFeed = () => {
 //     };
 //   }, []);
 
+const [news, setNews] = useState([])
+
+const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
+
 useEffect(() => {
   // Inside a function to use async/await
   const fetchData = async () => {
     try {
       setLoading(true);
-      window.SubstackFeedWidget = {
-        substackUrl: "quantumpirates.substack.com",
-        posts: 3,
-        filter: "top",
-        layout: "right",
-        hidden: ["subtitle", "reactions"],
-        colors: {
-          primary: "#404040",
-          secondary: "#808080",
-          background: "white",
-        }
-      }
-      const script = document.createElement("script");
-      script.src = "https://substackapi.com/embeds/feed.js";
-      script.async = true;
-      const embedElement = document.getElementById("substack-feed-embed");
-      if (embedElement) {
-        embedElement.appendChild(script);
-        return () => {
-          // Clean up script when the component unmounts
-          if (embedElement.contains(script)) {
-            embedElement.removeChild(script);
-          }
-        };
-      }
-    } finally {
+      await axios.get(`https://newsapi.org/v2/everything?q=Quantum&from=2024-06-06&sortBy=popularity&apiKey=${API_KEY}&pageSize=3&excludeDomains=sciencedaily.com&language=en`).then((res) => {return res.data.articles}).then((data) => 
+        setNews(data)
+      );
+
+      } 
+    
+     finally {
+      console.log(news)
       setLoading(false);
     }
   };
 
   fetchData();
 
-  return () => {
-    // Clean up script when the component unmounts
-    const embedElement = document.getElementById("substack-feed-embed");
-    if (embedElement) {
-      const scriptElement = embedElement.querySelector("script");
-      if (scriptElement) {
-        embedElement.removeChild(scriptElement);
-      }
-    }
-  };
 }, []);
 
 
   return <>
-  <div className=' text-black border rounded-[24px] shadow-lg  md:max-w-[70%] md:p-6 min-h-[500px] flex items-center justify-center flex-col min-w-[70%]' id="substack-feed-embed">
+  <div className=' text-black  rounded-[24px]    md:p-6 min-h-[500px] grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 items-center justify-center min-w-[70%]' id="substack-feed-embed">
+    
+
+  {news.map((article, index) => { 
+    return <div key={index} className=' rounded-[16px]  p-6 w-full flex items-center justify-center flex-col min-w-[70%]'>
+      <img src={article.urlToImage} className='w-full h-[400px] object-cover rounded-[16px]' />
+      <h1 className='text-xl mt-6 font-unbounded font-semibold'>{article.title}</h1>
+      <p className='text-gray-500 text-md font-asans mt-2'>{article.description}</p>
+      <a href={article.url} target='_blank' className='text-blue-500 font-asans mt-4 flex items-center justify-center gap-4 group hover:underline'>Read more <FaArrowRight className='group-hover:ml-3 transition-all' /></a>
+    </div>    
+
+  })}
+  
   {loading && <div className='flex flex-col gap-6 justify-center items-center p-6'>
     <h1 className='text-xl font-semibold'>Loading the latest news...</h1>
     <BarLoader />
+    
     </div>}
     </div>;
   </>

@@ -12,17 +12,21 @@ import HeroContainer from "@/components/HeroContainer";
 import HeroAboutContainer from "@/components/HeroAboutContainer";
 import HeroTeamContainer from "@/components/HeroTeamContainer";
 
+
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
 
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }
-    , 5000);
+   
+  // useEffect(() => {
 
-    return () => clearTimeout(timer);
-  })
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }
+  //   , 5000);
+
+  //   return () => clearTimeout(timer);
+  // })
   const ref = useRef(null);
   return (
   
@@ -39,10 +43,10 @@ export default function Home() {
 
         <div className="w-full px-4 py-24 flex flex-col items-center justify-center gap-12">
           <div>
-            <h1 className="font-bold text-3xl md:text-5xl text-center">
+            <h1 className="font-bold text-4xl font-unbounded md:text-5xl text-center">
               Latest News.
             </h1>
-            <h3 className="italic mt-4">
+            <h3 className="font-asans mt-4">
               Check out some recent news about quantum computing...
             </h3>
           </div>

@@ -22,8 +22,8 @@ module.exports = {
     // => @media (min-width: 1536px) { ... }
   },
     fontFamily: {
-      bj: ['"Bai Jamjuree"', 'sans-serif'],
-      source: ['"Source Sans 3"', 'sans-serif']
+      unbounded: ['"Unbounded"', 'sans-serif'],
+      asans: ['Albert Sans', 'serif']
     },
       extend: {
         animation: {

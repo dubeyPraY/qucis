@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  /* font-family: 'Source Sans 3', sans-serif; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,7 +39,6 @@
 .mainHeading{
   color: #FFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: "Bai Jamjuree", sans-serif;
 
 font-style: normal;
 font-weight: 700;
@@ -49,7 +49,6 @@ letter-spacing: -1.28px;
 .paraContent{
   color: rgba(217, 217, 217, 0.97);
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: 'Source Sans Pro', sans-serif;
 font-size: 20px;
 line-height: 33.6px; /* 140% */
 letter-spacing: 0.48px;
@@ -67,7 +66,6 @@ letter-spacing: 0.48px;
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-font-family: Bai Jamjuree;
 font-size: 128px;
 font-style: normal;
 font-weight: 700;
@@ -81,7 +79,6 @@ letter-spacing: -1.28px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* text-shadow: 0px 0px 4px rgba(0, 0, 0); */
-font-family: 'Source Sans 3';
 /* font-size: 96px; */
 font-weight: 800;
 line-height: normal;
@@ -92,7 +89,6 @@ line-height: normal;
 }
 
 .secondPara{
-  font-family: 'Source Sans 3';
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-style: normal;
   font-weight: 200;
@@ -100,7 +96,7 @@ line-height: normal;
 }
 
 .paraFonts{
-  font-family: 'Source Sans 3', sans-serif;
+  /* font-family: 'Source Sans 3', sans-serif; */
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 200;
 }
@@ -126,4 +122,10 @@ nav ul li:not(.contact_btn):hover{
 
 .active{
   color: #DE97FF;
+}
+
+.heroContainer{
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('/quantum-image.jpg');
+  background-size: cover;
+  
 }

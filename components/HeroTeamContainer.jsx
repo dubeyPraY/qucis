@@ -1,15 +1,25 @@
 import Link from 'next/link'
 import React from 'react'
+import { ReactSVG } from 'react-svg'
+import { createRoot } from 'react-dom/client'
 
 const HeroTeamContainer = () => {
+
+ 
+
   return (
-    <div className="w-full py-24 md:p-0 md:py-[200px] border bg-gradient-to-r from-[#3F2B49] to-[#9533C4] bg-cover grid place-items-center">
+    <div className="w-full overflow-hidden relative py-24 md:p-0 md:py-[200px]  grid place-items-center">
     <div className="w-[80%]  flex md:flex-row  flex-col-reverse justify-around  gap-12 items-center ">
-      <div className="md:w-[45%] flex flex-col  gap-6   ">
-        <h1 className="text-white font-bj font-bold text-[40px] md:text-[48px]  secondHeading">
+
+      <img src='illustrations/sssquiggly1.svg' className='absolute  opacity-50 -right-48 rotate-[160deg] h-[500px] w-[600px] z-[-1]' />
+      
+      
+      
+      <div className="md:w-[50%] flex flex-col  gap-6   ">
+        <h1 className="text-black/80 font-unbounded font-bold text-[40px] md:text-6xl  ">
           Our Team
         </h1>
-        <p className="secondPara text-[20px] md:text-[18px] text-white font-source font-light">
+        <p className=" text-[20px] mt-6 md:text-lg  text-black/80 font-asans">
           This Lab is head by <b>Dr. Ankur Raina</b>, who works as an
           Assistant Professor in{" "}
           <b>the Department of EECS, IISER Bhopal</b>. He worked as a
@@ -21,7 +31,7 @@ const HeroTeamContainer = () => {
           with <b>Prof. Bane Vasic</b>.
         </p>
         <Link href="/team">
-          <button className="text-white mt-12 shadow-lg max-w-[150px] bg-[#9717E5] rounded-full px-4 py-2  gap-4  font-source flex items-center justify-center md:justify-around hover:bg-[#9717E5]/80 hover:shadow-xl transition-all">
+          <button className="text-purple/80 border-2 border-purple-200  shadow-lg  bg-white text-purple-500 font-bold rounded-[16px] px-4 py-2  gap-4  font-asans flex items-center hover:bg-purple-100 hover:shadow-xl transition-all">
               Know Us
             <svg
               width="9"
@@ -33,7 +43,7 @@ const HeroTeamContainer = () => {
                 
               <path
                 d="M2 2L7 7L2 12"
-                stroke="#FFFFFF"
+                stroke="rgb(126,34,206)"
                 strokeWidth="3"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -42,7 +52,7 @@ const HeroTeamContainer = () => {
           </button>
         </Link>
       </div>
-      <div className='lg:w-[400px] lg:h-[400px] w-[300px] h-[300px] bg-[url(/members/AnkurRaina.jpeg)] bg-cover   shadow-[15px_15px_0px_0px_rgba(209,0,209)]'></div>
+      <div className='lg:w-[500px] lg:h-[600px] object-center rounded-xl border-2 border-gray-600  w-[300px] h-[300px] bg-[url(/members/AnkurRaina.jpeg)] bg-cover   shadow-[15px_15px_0px_0px_rgba(0,0,0,0.8)]'></div>
 
     </div>
   </div>
