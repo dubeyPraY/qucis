@@ -24,11 +24,11 @@ const page = () => {
 
   return (
     // <div>
-        <div className="w-full   bg-[url('/figmaStuffs/teambg.png')] bg-cover  p-6">
+        <div className="w-full font-asans  bg-[url('/figmaStuffs/teambg.png')] bg-cover  p-6">
         
     <Transition>
         <div className='w-full  mt-24 md:mt-32 md:px-24  flex items-center justify-left'>
-              <h1 className=' teamHeading text-[36px] md:text-[64px] drop-shadow-lg'>
+              <h1 className='font-unbounded teamHeading text-[36px] md:text-[64px] drop-shadow-lg'>
               We are thankful to receive<br /> research funding from 
               </h1>
             </div>

@@ -27,7 +27,6 @@
   justify-content: center;
   align-items: center;
   gap: 27px;
-
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -81,6 +80,7 @@ letter-spacing: -1.28px;
   /* text-shadow: 0px 0px 4px rgba(0, 0, 0); */
 /* font-size: 96px; */
 font-weight: 800;
+font-family: 'Albert Sans';
 line-height: normal;
 }
 
@@ -103,10 +103,11 @@ line-height: normal;
 
 nav ul li{
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
 }
 
 nav ul li:not(.contact_btn):hover{
-  color: #9717E5;
+  color: #da9fff;
 }
 
 .carousel{
@@ -125,7 +126,7 @@ nav ul li:not(.contact_btn):hover{
 }
 
 .heroContainer{
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('/quantum-image.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/quantum-image.jpg');
   background-size: cover;
   
 }

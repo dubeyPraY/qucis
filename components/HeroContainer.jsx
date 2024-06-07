@@ -22,7 +22,7 @@ const HeroContainer = () => {
             on Quantum information theory and coding.
           </p>
           <Link href="/about">
-            <button className="font-asans flex mx-auto gap-4 justify-between items-center mt-[30px] md:mt-[60px] px-[25px] md:px-[25px] py-[16px] text-[15px] md:text-md  bg-white rounded-full font-source main_btn hover:brightness-90 transition-all">
+            <button className="font-asans flex mx-auto gap-4 justify-between items-center mt-[30px] md:mt-[60px] px-[25px] md:px-[20px] py-[10px] text-[15px] md:text-md  bg-white rounded-[16px] font-source main_btn hover:brightness-90 transition-all">
               <h1 className="text-black font-extrabold">KNOW US</h1>
               <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
                 <path

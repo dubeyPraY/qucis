@@ -46,10 +46,10 @@ export default function Navbar() {
           <Link href="/">QuCIS</Link>
         </div>
         {/* {isDesktop ? ( */}
-        <ul className=" flex flex-col lg:flex-row  gap-6 text-md font-regular font-asans items-center  lg:visible invisible">
+        <ul className=" flex flex-col lg:flex-row gap-6 text-md font-regular font-asans items-center  lg:visible invisible">
           <li
             className={` ${
-              path === "/about" ? "text-[#DE97FF]" : "text-white/80"
+              path === "/about" ? "text-purple-400" : "text-white/80"
             }`}
           >
             <Link href="/about">About</Link>
@@ -90,7 +90,7 @@ export default function Navbar() {
           </li>
           <Link href="/contact">
             <li
-              className={`contact_btn rounded-full cursor-pointer transition-all ${
+              className={`contact_btn rounded-[16px] cursor-pointer transition-all ${
                 path === "/contact"
                   ? "bg-white text-[#9717E5]"
                   : "text-white/80 bg-[#9717E5]"
@@ -132,7 +132,7 @@ export default function Navbar() {
           />
         </div>
         <div className="p-4 mt-6 ">
-          <ul className="text-white/80 font-asans  text-lg tracking-wide grid gap-2">
+          <ul className="text-white/80 font-asans   text-lg tracking-wide grid gap-2">
             <li
               className={` ${
                 path === "/about" ? "text-[#DE97FF]" : "text-white/80"

@@ -30,23 +30,23 @@ const ImageCarousel = () => {
  
   return (
 
-      <Carousel autoPlay  infiniteLoop showArrows showThumbs={false} className="max-w-[340px] lg:max-w-[900px]  " >
+      <Carousel autoPlay  infiniteLoop showArrows showThumbs={true}  centerMode={true} className="  " >
         {carouselItems.map((item) => (
           <div
             key={item.id}
-            className="   p-6 py-12  md:px-12  md:py-[74px] gap-12 flex flex-col md:flex-row justify-between"
+            className="    flex flex-col  justify-between"
           >
-            <div className="md:w-[50%] w-[90%] border rounded-[24px] drop-shadow-lg">
-              <img src={item.image} className="md:h-full rounded-[24px] shadow-lg" />
+            <div className="  px-4 rounded-[16px]">
+              <img src={item.image} className="md:h-full aspect-video object-cover rounded-[16px] shadow-lg" />
             </div>
-            <div className="md:w-[55%] text-left  flex flex-col gap-[19px] ">
+            {/* <div className="md:w-[55%] text-left  flex flex-col gap-[19px] ">
               <h1 className="text-[40px] font-bj font-extrabold  text-purple-600 underline">
                 {item.title}
               </h1>
               <p className="  text-md ">
                 {item.description}
               </p>
-            </div>
+            </div> */}
           </div>
         ))}
       </Carousel>

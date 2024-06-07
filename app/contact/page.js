@@ -3,11 +3,11 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-full  bg-[url('/figmaStuffs/teambg.png')] bg-cover md:p-24 p-6 ">
+    <div className="w-full font-asans  bg-[url('/figmaStuffs/teambg.png')] bg-cover md:p-24 p-6 ">
       <Transition>
         <div>
     <div className='w-full py-24 md:p-24 flex items-center justify-center'>
-      <h1 className=' teamHeading text-[55px] md:text-[96px] drop-shadow-lg z-0'>
+      <h1 className=' teamHeading font-unbounded text-[55px] md:text-[96px] drop-shadow-lg z-0'>
         Contact Us.
       </h1>
     </div>
@@ -36,7 +36,7 @@ const Contact = () => {
     </div>
 
     <div className='w-full py-12 md:py-24  flex items-center justify-center'>
-      <h1 className=' teamHeading text-[55px] md:text-[96px] drop-shadow-lg'>
+      <h1 className='font-unbounded teamHeading text-[55px] md:text-[96px] drop-shadow-lg'>
         Join Us.
       </h1>
     </div>
