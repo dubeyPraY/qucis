@@ -3,7 +3,7 @@ import SubstackFeed from "@/components/Substack";
 
 export default function News(){
     return(
-        <div className="w-full px-4 py-24 flex flex-col items-center justify-center gap-12">
+        <div className="w-full px-4  flex flex-col items-center justify-center gap-12">
         <div>
           <h1 className="font-bold text-4xl font-unbounded md:text-5xl text-center">
             Latest News.

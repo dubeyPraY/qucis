@@ -3,15 +3,15 @@ import Link from 'next/link'
 const HeroAboutContainer = () => {
   return (
     <>
-        <div className="w-full py-24  relative  grid place-items-center">
+        <div className="w-full py-12 min-h-screen relative  grid place-items-center">
           {/* <div className='absolute w-[44%] h-full bg-gradient-to-br from-violet-400 to-purple-600 top-0 left-0 z-[-1]'></div> */}
           <div className=" w-[80%] py-12 flex md:flex-row flex-col justify-around items-center gap-32 ">
             <div className='w-[300px] h-[300px] lg:w-[500px] rounded-[24px] lg:h-[600px] bg-[url(/imgs/1.jpg)] bg-cover shadow-[15px_15px_0px_0px_rgba(0,0,20)]'></div>
             <div className="md:w-[50%] flex flex-col gap-6 ">
-              <h1 className="font-unbounded relative font-bold text-[40px] md:text-6xl  text-black/80">
+              <h1 className="font-unbounded font-bold  relative  text-[40px] md:text-6xl  text-black/80">
                 Our Mission, Our Vision
        
-                    <svg className='absolute -top-44   -right-24' width='400' height='400' xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800">
+                    <svg className='absolute -top-44  hidden lg:block -right-24' width='400' height='400' xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnssvgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800">
         <g strokeWidth="10" stroke="hsl(0, 0%, 30%)" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="64.5 28" transform="matrix(-0.13917310096006535,0.9902680687415704,-0.9902680687415704,-0.13917310096006535,954.7764678806543,59.562012887398)">
           <path d="M250.17772483825684 250Q185.17772483825684 466 400.17772483825684 400Q614.1777248382568 302 550.1777248382568 550 " markerEnd="url(#SvgjsMarker2067)"></path>
         </g>

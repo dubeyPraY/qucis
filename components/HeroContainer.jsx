@@ -13,11 +13,11 @@ const HeroContainer = () => {
 
         {/* bg-gradient-to-r from-purple-600 to-purple-900  */}
         <div className=" mx-auto font-unbounded   z-50">
-          <h1 className=" font-serif text-purple-200 leading-[70px] tracking-wide text-6xl text-center font-extrabold ">
+          <h1 className=" font-serif text-purple-200 lg:leading-[70px] lg:tracking-wide text-4xl lg:text-6xl text-center font-extrabold ">
             Welcome to <br />QuCIS<span>.</span>
           </h1>
           
-          <p className="  font-asans md:mt-[20px] text-white/70  px-12 text-xl   ">
+          <p className="  font-asans mt-[20px] text-white/70  px-12 text-md text-center lg:text-xl   ">
            A Research Group focused
             on Quantum information theory and coding.
           </p>

@@ -47,7 +47,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      await axios.get(`https://newsapi.org/v2/everything?q=Quantum&from=2024-06-06&sortBy=popularity&apiKey=${API_KEY}&pageSize=3&excludeDomains=sciencedaily.com&language=en`).then((res) => {return res.data.articles}).then((data) => 
+      await axios.get(`https://newsapi.org/v2/everything?q=Quantum Computing&from=2024-06-06&sortBy=popularity&apiKey=${API_KEY}&pageSize=3&excludeDomains=sciencedaily.com,slashdot.org,playstation.com,soatok.org,cheriot.org&language=en`).then((res) => {return res.data.articles}).then((data) => 
         setNews(data)
       );
 

@@ -10,12 +10,9 @@ import HeroTeamContainer from "@/components/HeroTeamContainer";
 import News from "@/components/News";
 import LandingCarousel from "@/components/LandingCarousel";
 
-
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-   
   // useEffect(() => {
 
   //   const timer = setTimeout(() => {
@@ -27,10 +24,7 @@ export default function Home() {
   // })
   const ref = useRef(null);
   return (
-  
-
-
-      <>
+    <>
       {/* {loading ? <Preloader /> :  */}
       <main>
         <HeroContainer />
@@ -39,14 +33,13 @@ export default function Home() {
         <HeroAboutContainer />
         <HeroTeamContainer />
 
-      <News />
+        <News />
 
         {/* FOURTH SECTION */}
         {/* CAROUSEL SECTION */}
-       <LandingCarousel />
-        </main>
-        {/* } */}
-      </>
-
+        <LandingCarousel />
+      </main>
+      {/* } */}
+    </>
   );
 }
