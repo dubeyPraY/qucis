@@ -40,14 +40,14 @@ const SubstackFeed = () => {
 
 const [news, setNews] = useState([])
 
-const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_GNEWS_API_KEY;
 
 useEffect(() => {
   // Inside a function to use async/await
   const fetchData = async () => {
     try {
       setLoading(true);
-      await axios.get(`https://newsapi.org/v2/everything?q=Quantum Computing&from=2024-06-06&sortBy=popularity&apiKey=${API_KEY}&pageSize=3&excludeDomains=sciencedaily.com,slashdot.org,playstation.com,soatok.org,cheriot.org&language=en`).then((res) => {return res.data.articles}).then((data) => 
+      await axios.get(`https://gnews.io/api/v4/search?q=Quantum%20COmputing&lang=en&country=us&max=3&apikey=${API_KEY}`).then((res) => {return res.data.articles}).then((data) => 
         setNews(data)
       );
 
@@ -65,12 +65,12 @@ useEffect(() => {
 
 
   return <>
-  <div className=' text-black  rounded-[24px]    md:p-6 min-h-[500px] grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 items-center justify-center min-w-[70%]' id="substack-feed-embed">
+  <div className=' text-black  rounded-[24px]    md:p-6  grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 items-center justify-center min-w-[70%]' id="substack-feed-embed">
     
 
   {news.map((article, index) => { 
-    return <div key={index} className=' rounded-[16px]  p-6 w-full flex items-center justify-center flex-col min-w-[70%]'>
-      <img src={article.urlToImage} className='w-full h-[400px] object-cover rounded-[16px]' />
+    return <div key={index} className=' rounded-[16px]  p-6 w-full flex  justify-center flex-col min-w-[70%]'>
+      <img src={article.image} className='w-full drop-shadow-xl h-[400px] object-cover rounded-[16px]' />
       <h1 className='text-xl mt-6 font-unbounded font-semibold'>{article.title}</h1>
       <p className='text-gray-500 text-md font-asans mt-2'>{article.description}</p>
       <a href={article.url} target='_blank' className='text-blue-500 font-asans mt-4 flex items-center justify-center gap-4 group hover:underline'>Read more <FaArrowRight className='group-hover:ml-3 transition-all' /></a>
@@ -78,7 +78,7 @@ useEffect(() => {
 
   })}
   
-  {loading && <div className='flex w-full flex-col gap-6 justify-center items-center p-6'>
+  {loading && <div className='flex w-full mx-auto border flex-col gap-6 justify-center items-center p-6'>
     <h1 className='text-xl font-semibold'>Loading the latest news...</h1>
     <BarLoader />
     
