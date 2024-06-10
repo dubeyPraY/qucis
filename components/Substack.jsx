@@ -78,7 +78,7 @@ useEffect(() => {
 
   })}
   
-  {loading && <div className='flex flex-col gap-6 justify-center items-center p-6'>
+  {loading && <div className='flex w-full flex-col gap-6 justify-center items-center p-6'>
     <h1 className='text-xl font-semibold'>Loading the latest news...</h1>
     <BarLoader />
     

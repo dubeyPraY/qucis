@@ -13,7 +13,7 @@ export default function News(){
           </h3>
         </div>
 
-        <script src="https://substackapi.com/embeds/feed.js" async></script>
+        {/* <script src="https://substackapi.com/embeds/feed.js" async></script> */}
       <SubstackFeed />
       </div>
     )
