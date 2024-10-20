@@ -16,45 +16,53 @@ const Team = () => {
       github: "",
       instagram: "",
     },
-
     {
       id: 2,
-      name: "Sanidhya Gupta",
-      position: "M.S. Student",
-      img: "/members/sanidhya.png",
-      bio: "Just a kid passionate about technology, particularly computers. Engineering is what I do. My experiments range from fine-tuning working codes to engaging in academic research and occasionally cooking something-something in the kitchen. He is the currently the recipient of Chanakya UG fellowship funded by i-HUB, IISER Pune",
-    },
-    {
-      id: 3,
-      name: "Pranav Maheshwari",
-      position: "M.S. Student",
-      img: "/members/pranav.png",
-      bio: "A Quantum Information Researcher who loves talking about life, politics and entrepreneurship. Excited to meet new faces and waiting for you to send a Hi!",
-    },
-    {
-      id: 4,
       name: "Mainak Bhattacharyya",
       img: "/members/mainak.png",
       position: "PhD Student",
       bio: "Mainak graduated with an MSc from the Department of Physics, NIT Jamshedpur in May 2023. He is the currently the recipient of Chanakya PG fellowship funded by i-HUB, IISER Pune. Well, I am just a guy, who finds it difficult to understand the prescribed theories of natural dynamics. Always ready for a cup of coffee and biriyani from my dear Kolkata. ",
+    },
+    {
+      id: 3,
+      name: "Yash Prabhat",
+      position: "M.S. Student",
+      img: "/members/yash.png",
+      bio: "I am a physics major who is mesmerized by the quantum phenomenon. In my leisure, you will find me on the badminton court or playing video games. Say hi if you come around :).",
+      github: "",
+      instagram: "",
     },
   ];
 
   const alumni = [
     {
       id: 1,
+      name: "Sanidhya Gupta",
+      position: "M.S. Student",
+      img: "/members/sanidhya.png",
+      bio: "Just a kid passionate about technology, particularly computers. Engineering is what I do. My experiments range from fine-tuning working codes to engaging in academic research and occasionally cooking something-something in the kitchen. He is the currently the recipient of Chanakya UG fellowship funded by i-HUB, IISER Pune",
+    },
+    {
+      id: 2,
+      name: "Pranav Maheshwari",
+      position: "M.S. Student",
+      img: "/members/pranav.png",
+      bio: "A Quantum Information Researcher who loves talking about life, politics and entrepreneurship. Excited to meet new faces and waiting for you to send a Hi!",
+    },
+    {
+      id: 3,
       img: "/members/sid.png",
       name: "Siddharth Sethi",
       bio: "Siddharth graduated with an MS from the Department of EECS in May 2023. Hobbies are Photography, Videography and video-editing, Cooking, Playing Badminton.",
     },
     {
-      id: 2,
+      id: 4,
       img: "/members/rohit.png",
       name: "Rohit K. Teja",
       bio: "Rohit graduated with an MS from the Department of EECS in May 2023. “Books, humour, music and coffee. Occasional badminton and basketball player.”",
     },
     {
-      id: 3,
+      id: 5,
       img: "/members/madhav.png",
       name: "Madhav Sharma",
       bio: "Madhav graduated with an MS from the Department of Physics in May 2023. He is currently with Capgemini Quantum Lab. In my free time other than reading about emerging technology and there application I like to watch movies, play volleyball and spend quality time with my friends.",
@@ -66,7 +74,7 @@ const Team = () => {
       bio: "Swayangprabha graduated with an MS from the Department of Physics, IISERB in May 2022. She worked in the QuCIS lab as a research associate  and was the recipient of Chanakya PG fellowship from  i-HUB, Pune between July 2022 and April 2023.  She is currently a PhD student in the Department of ECE, University of Arizona. An eccentric fellow in a heliocentric world who love learning about people, places and physics. :D",
     },
     {
-      id: 5,
+      id: 7,
 
       img: "/members/akash.png",
       name: "Akash Kumar Singh",
