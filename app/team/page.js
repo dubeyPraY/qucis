@@ -28,7 +28,7 @@ const Team = () => {
       name: "Yash Prabhat",
       position: "M.S. Student",
       img: "/members/yash.png",
-      bio: "I am a physics major who is mesmerized by the quantum phenomenon. In my leisure, you will find me on the badminton court or playing video games. Say hi if you come around :).",
+      bio: "I am a physics major who is mesmerized by the quantum phenomenon. In my leisure, you will find me on the badminton court or playing video games. Say hi if you are around :).",
       github: "",
       instagram: "",
     },
